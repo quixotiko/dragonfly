@@ -42,6 +42,7 @@
 	animation: rippleScattering02 6s linear infinite;
 }
 /*这里把蜻蜓尾部作为一个基点，因为要保证蜻蜓点水时尾部和涟漪都位于页面的中心。这里用设置position的方法实现垂直居中*/
+
 .dragonfly__tail__end {
 	position: absolute;
 	z-index: 1;
@@ -145,8 +146,9 @@
 	border: 2px solid black;
 	border-color: rgba(255,255,255,.4);
 	border-radius: 50%;
-	transform-origin: bottom;/*要记住设置transform的原点*/
+	transform-origin: bottom;
 }
+/*要记住设置transform的原点*/
 .dragonfly__wings--big {
 	width: 15px;
 	height: 70px;
@@ -250,6 +252,7 @@
 	}
 }
 /*这里要先设置外层的ripple的动画！如果先设置里层的ripple的动画，那么里层ripple变大的时候外层ripple会被撑开，涟漪就会向右移动*/
+
 @keyframes rippleScattering01 {
 	0% {
 		border: none;
