@@ -33,13 +33,13 @@
 	width: 640px;
 	height: 50px;
 	border: 1px solid white;
-	animation: rippleScattering01 6s linear infinite;
+	animation: rippleScattering01 12s linear infinite;
 }
 .water .ripple02 {
 	width: 80px;
 	height: 20px;
 	border: 1px solid white;
-	animation: rippleScattering02 6s linear infinite;
+	animation: rippleScattering02 12s linear infinite;
 }
 /*这里把蜻蜓尾部作为一个基点，因为要保证蜻蜓点水时尾部和涟漪都位于页面的中心。这里用设置position的方法实现垂直居中*/
 
@@ -60,7 +60,7 @@
 	-ms-transform-origin: bottom;
 	-ms-transform: translate(-20px,-20px);
 	transform: translate(-20px,-20px);
-	animation: dragonflyFlying 6s linear infinite;
+	animation: dragonflyFlying 12s linear infinite;
 }
 .dragonfly__tail {
 	position: absolute;
@@ -75,7 +75,7 @@
 	border-radius: 40%;
 	transform-origin: left;
 	-ms-transform-origin: left;
-	animation: turnTail 6s linear infinite;
+	animation: turnTail 12s linear infinite;
 }
 .dragonfly__body {
 	position: absolute;
