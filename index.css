@@ -100,23 +100,28 @@
 	margin: auto;
 	border: 2px solid rgba(255,255,255,1);
 	border-radius: 50%;
-	background-color: rgba(255,255,255,.1);
+	background-color: black;
+	z-index: 2;
 }
 .dragonfly__eye {
 	position: absolute;
 	width: 15px;
 	height: 15px;
-	left: 0;
+	top: -8px;
+	bottom: 0;
+	left: -170px;
 	margin: auto;
 	border-radius: 50%;
 	border: 1px solid white;
 	background-image: radial-gradient(black,white);
 }
 .dragonfly__eye--left {
-	left: 10px;
+	left: -165px;
+	z-index: 3;
 }
 .dragonfly__eye--right {
-	left: -8px;
+	left: -175px;
+	z-index: -1;
 }
 .dragonfly__legs {
 	position: absolute;
