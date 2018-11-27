@@ -60,7 +60,7 @@
 	-ms-transform-origin: bottom;
 	-ms-transform: translate(-20px,-20px);
 	transform: translate(-20px,-20px);
-	animation: dragonflyFlying 6s linear infinite;
+	animation: dragonflyFlying 6s ease infinite;
 }
 .dragonfly__tail {
 	position: absolute;
