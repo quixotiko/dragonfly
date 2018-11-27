@@ -33,13 +33,13 @@
 	width: 640px;
 	height: 50px;
 	border: 1px solid white;
-	animation: rippleScattering01 12s linear infinite;
+	animation: rippleScattering01 6s linear infinite;
 }
 .water .ripple02 {
 	width: 80px;
 	height: 20px;
 	border: 1px solid white;
-	animation: rippleScattering02 12s linear infinite;
+	animation: rippleScattering02 6s linear infinite;
 }
 /*这里把蜻蜓尾部作为一个基点，因为要保证蜻蜓点水时尾部和涟漪都位于页面的中心。这里用设置position的方法实现垂直居中*/
 
@@ -60,7 +60,7 @@
 	-ms-transform-origin: bottom;
 	-ms-transform: translate(-20px,-20px);
 	transform: translate(-20px,-20px);
-	animation: dragonflyFlying 12s linear infinite;
+	animation: dragonflyFlying 6s linear infinite;
 }
 .dragonfly__tail {
 	position: absolute;
@@ -75,7 +75,7 @@
 	border-radius: 40%;
 	transform-origin: left;
 	-ms-transform-origin: left;
-	animation: turnTail 12s linear infinite;
+	animation: turnTail 6s linear infinite;
 }
 .dragonfly__body {
 	position: absolute;
@@ -92,11 +92,11 @@
 }
 .dragonfly__head {
 	position: absolute;
-	width: 30px;
-	height: 30px;
+	width: 22px;
+	height: 22px;
 	top: 0;
 	bottom: 0;
-	left: -170px;
+	left: -160px;
 	margin: auto;
 	border: 2px solid rgba(255,255,255,1);
 	border-radius: 50%;
@@ -116,11 +116,11 @@
 	background-image: radial-gradient(black,white);
 }
 .dragonfly__eye--left {
-	left: -165px;
+	left: -155px;
 	z-index: 3;
 }
 .dragonfly__eye--right {
-	left: -175px;
+	left: -165px;
 	z-index: -1;
 }
 .dragonfly__legs {
@@ -153,69 +153,61 @@
 	margin: auto;
 	border: 2px solid black;
 	border-color: rgba(255,255,255,.4);
-	border-radius: 50%;
+	border-radius: 20px;
 	transform-origin: bottom;
-	-ms-transform-origin: bottom;
 }
-/*要记住设置transform的原点*/
 .dragonfly__wings--big {
-	width: 15px;
+	width: 24px;
 	height: 70px;
 	top: -70px;
 	left: -130px;
 	background-color: rgba(255,255,255,.1);
-	animation: bigWingsMoving 0.1s linear infinite;
 }
 .dragonfly__wings--small {
-	width: 10px;
+	width: 14px;
 	height: 60px;
 	top: -60px;
-	left: -125px;
-	transform: rotate(30deg);
-	-ms-transform: rotate(30deg);
+	left: -110px;
 	background-color: rgba(255,255,255,.2);
-	animation: smallWingsMoving 0.1s linear infinite;
+	border-color: rgba(255,255,255,.3);
 }
 .dragonfly__wings--right {
-	transform: rotate(10deg);
-	-ms-transform: rotate(10deg);
-	animation-delay: 0.1s;
+	z-index: 1;
+	-webkit-transform: rotate(10deg) skew(15deg,0) rotateX(80deg);
+	animation: rightWingsMoving 0.1s linear infinite;
+}
+.dragonfly__wings--left {
+	z-index: 3;
+	transform: rotate(195deg) skew(20deg,0) rotateX(80deg);
+	animation: leftWingsMoving 0.1s linear infinite;
 }
 
-@keyframes bigWingsMoving {
+@keyframes rightWingsMoving {
 	0% {
-		transform: rotate(0);
-		-ms-transform: rotate(0);
+		transform: rotate(10deg) skew(15deg,0) rotateX(80deg);
 	}
 	25% {
-		transform: rotate(60deg);
-		-ms-transform: rotate(60deg);
+		transform: rotate(10deg) skew(15deg,0) rotateX(90deg);
 	}
 	75% {
-		transform: rotate(-60deg);
-		-ms-transform: rotate(-60deg);
+		transform: rotate(10deg) skew(15deg,0) rotateX(80deg);
 	}
 	100% {
-		transform: rotate(0);
-		-ms-transform: rotate(0);
+		transform: rotate(10deg) skew(15deg,0) rotateX(70deg);
 	}
 }
-@keyframes smallWingsMoving {
+@keyframes leftWingsMoving {
 	0% {
-		transform: rotate(0);
-		-ms-transform: rotate(0);
+		transform: rotate(185deg) skew(20deg,0) rotateX(80deg);
 	}
 	25% {
-		transform: rotate(30deg);
-		-ms-transform: rotate(30deg);
+		transform: rotate(195deg) skew(20deg,0) rotateX(90deg);
 	}
 	75% {
-		transform: rotate(-30deg);
-		-ms-transform: rotate(-30deg);
+		transform: rotate(185deg) skew(20deg,0) rotateX(80deg);
 	}
 	100% {
-		transform: rotate(0);
-		-ms-transform: rotate(0);
+		transform: rotate(195deg) skew(20deg,0) rotateX(70deg);
 	}
 }
 @keyframes dragonflyFlying {
